@@ -8,12 +8,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tmetade.ulearn.SplashScreen"
-    android:background="@android:color/holo_purple">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/imgLogo"
+        android:src="@drawable/ulearn_logo"
+        android:contentDescription="comapny logo" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/icon"
-        android:layout_centerInParent="true" />
+        android:id="@+id/imgControllerIcon"
+        android:layout_below="@+id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp" />
+
 </RelativeLayout>
