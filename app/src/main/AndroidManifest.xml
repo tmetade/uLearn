@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".LanguageList" />
-        <activity android:name=".SignUp"></activity>
+        <activity android:name=".SignUp" />
+        <activity android:name=".Main"></activity>
     </application>
 
 </manifest>

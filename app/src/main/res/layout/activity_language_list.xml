@@ -9,4 +9,88 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tmetade.ulearn.LanguageList">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSelectLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="Select a language to learn"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="French"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Spanish"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLang3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Portuguese"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLang4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Russian"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLang5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="German"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLang6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Polish"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
 </RelativeLayout>
