@@ -78,7 +78,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener
                         {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+
+                            Intent intent = new Intent(getBaseContext(), Main.class);
+                            startActivity(intent);
                         }
                         else
                         {
@@ -97,12 +99,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener
                     }
                 });
         // [END sign_in_with_email]
-    }
-
-
-    private void signOut()
-    {
-        mAuth.signOut();
     }
 
     private boolean validateForm()

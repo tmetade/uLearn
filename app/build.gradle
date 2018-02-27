@@ -25,10 +25,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
-<<<<<<< HEAD
-    implementation 'com.android.support:design:27.0.2'
-=======
     compile 'com.google.firebase:firebase-database:11.8.0'
->>>>>>> cd13118294f6d07d4eeee4f6af4bc6ce99c84ac5
 }
 apply plugin: 'com.google.gms.google-services'
