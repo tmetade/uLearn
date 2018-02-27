@@ -60,55 +60,74 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         boolean valid = true;
 
         String firstName = mFirstNameField.getText().toString();
-        if (TextUtils.isEmpty(firstName)) {
+        if (TextUtils.isEmpty(firstName))
+        {
             mFirstNameField.setError("Required.");
             valid = false;
-        } else {
+        }
+        else
+        {
             mFirstNameField.setError(null);
         }
 
         String username = mUsernameField.getText().toString();
-        if (TextUtils.isEmpty(username)) {
+        if (TextUtils.isEmpty(username))
+        {
             mUsernameField.setError("Required.");
             valid = false;
-        } else {
+        }
+        else
+        {
             mUsernameField.setError(null);
         }
 
         String email = mEmailField.getText().toString();
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email))
+        {
             mEmailField.setError("Required.");
             valid = false;
-        } else {
+        }
+        else
+        {
             mEmailField.setError(null);
         }
 
         String password = mPasswordField.getText().toString();
-        if (TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(password))
+        {
             mPasswordField.setError("Required.");
             valid = false;
-        } else {
+        }
+        else
+        {
             mPasswordField.setError(null);
         }
         return valid;
     }
 
-    private void createAccount(String email, String password) {
+    private void createAccount(String email, String password)
+    {
         Log.d(TAG, "createAccount:" + email);
-        if (!validateForm()) {
+        if (!validateForm())
+        {
             return;
         }
 
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
+                {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                    public void onComplete(@NonNull Task<AuthResult> task)
+                    {
                         if (task.isSuccessful())
                         {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
+
                             sendEmailVerification();
+
+                            writeNewUser(mAuth.getUid(), mUsernameField.getText().toString(), mFirstNameField.getText().toString());
 
                             Intent intent = new Intent(getBaseContext(),Main.class);
                             startActivity(intent);
@@ -129,21 +148,27 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         // [END create_user_with_email]
     }
 
-    private void sendEmailVerification() {
+    private void sendEmailVerification()
+    {
         // Send verification email
         // [START send_email_verification]
         final FirebaseUser user = mAuth.getCurrentUser();
         user.sendEmailVerification()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                .addOnCompleteListener(this, new OnCompleteListener<Void>()
+                {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task) {
+                    public void onComplete(@NonNull Task<Void> task)
+                    {
                         // [START_EXCLUDE]
 
-                        if (task.isSuccessful()) {
+                        if (task.isSuccessful())
+                        {
                             Toast.makeText(SignUp.this,
                                     "Verification email sent to " + user.getEmail(),
                                     Toast.LENGTH_SHORT).show();
-                        } else {
+                        }
+                        else
+                        {
                             Log.e(TAG, "sendEmailVerification", task.getException());
                             Toast.makeText(SignUp.this,
                                     "Failed to send verification email.",

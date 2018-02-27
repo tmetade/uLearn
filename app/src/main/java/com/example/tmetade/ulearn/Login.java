@@ -47,7 +47,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener
     }
 
     @Override
-    public void onStart() {
+    public void onStart()
+    {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -56,9 +57,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener
     }
     // [END on_start_check_user]
 
-    private void signIn(String email, String password) {
+    private void signIn(String email, String password)
+    {
         Log.d(TAG, "signIn:" + email);
-        if (!validateForm()) {
+        if (!validateForm())
+        {
             return;
         }
 
@@ -66,14 +69,19 @@ public class Login extends AppCompatActivity implements View.OnClickListener
 
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
+                {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                    public void onComplete(@NonNull Task<AuthResult> task)
+                    {
+                        if (task.isSuccessful())
+                        {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                        } else {
+                        }
+                        else
+                        {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(Login.this, "Authentication failed.",
@@ -96,44 +104,53 @@ public class Login extends AppCompatActivity implements View.OnClickListener
         mAuth.signOut();
     }
 
-    private boolean validateForm() {
+    private boolean validateForm()
+    {
         boolean valid = true;
 
         String email = mEmailField.getText().toString();
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email))
+        {
             mEmailField.setError("Required.");
             valid = false;
-        } else {
+        }
+        else
+        {
             mEmailField.setError(null);
         }
 
         String password = mPasswordField.getText().toString();
-        if (TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(password))
+        {
             mPasswordField.setError("Required.");
             valid = false;
-        } else {
+        }
+        else
+        {
             mPasswordField.setError(null);
         }
         return valid;
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
+    {
         int buttonId = v.getId();
-        if (buttonId == R.id.email_create_account_button) {
+        if (buttonId == R.id.email_create_account_button)
+        {
             Intent intent = new Intent(getBaseContext(),SignUp.class);
             startActivity(intent);
-        } else if (buttonId == R.id.email_sign_in_button) {
+        }
+        else if (buttonId == R.id.email_sign_in_button)
+        {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
-//        } else if (i == R.id.sign_out_button) {
-//            signOut();
-//        } else if (i == R.id.verify_email_button) {
-//            sendEmailVerification();
         }
     }
 
-    public void showProgressDialog() {
-        if (mProgressDialog == null) {
+    public void showProgressDialog()
+    {
+        if (mProgressDialog == null)
+        {
             mProgressDialog = new ProgressDialog(this);
             mProgressDialog.setMessage(getString(R.string.loading));
             mProgressDialog.setIndeterminate(true);
@@ -142,8 +159,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener
         mProgressDialog.show();
     }
 
-    public void hideProgressDialog() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+    public void hideProgressDialog()
+    {
+        if (mProgressDialog != null && mProgressDialog.isShowing())
+        {
             mProgressDialog.dismiss();
         }
     }
