@@ -99,6 +99,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener
         // [END sign_in_with_email]
     }
 
+
     private void signOut()
     {
         mAuth.signOut();
