@@ -10,11 +10,11 @@
     tools:context="com.example.tmetade.ulearn.SplashScreen">
 
     <ImageView
+        android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imgLogo"
-        android:src="@drawable/ulearn_logo"
-        android:contentDescription="comapny logo" />
+        android:contentDescription="company logo"
+        android:src="@drawable/ulearn_logo" />
 
     <ImageView
         android:layout_width="wrap_content"
