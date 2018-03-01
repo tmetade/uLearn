@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,9 +25,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
     private static final String TAG = "Login";
 
     private EditText mFirstNameField;
+    private EditText mLastNameField;
     private EditText mUsernameField;
     private EditText mEmailField;
     private EditText mPasswordField;
+    private EditText mConfirmPasswordField;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
@@ -38,19 +41,22 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_sign_up);
 
         mFirstNameField = (EditText) findViewById(R.id.field_firstName);
+        mLastNameField = (EditText) findViewById(R.id.field_lastName);
         mUsernameField = (EditText) findViewById(R.id.field_username);
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
+        mConfirmPasswordField = (EditText) findViewById(R.id.field_confirmPassword);
 
         findViewById(R.id.create_account_button).setOnClickListener(this);
+        findViewById(R.id.back_button).setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
-    private void writeNewUser(String userId, String userName, String firstName)
+    private void writeNewUser(String userId, String firstName, String lastName, String username)
     {
-        User user = new User(userName, firstName);
+        User user = new User(firstName, lastName, username);
 
         mDatabase.child("users").child(userId).setValue(user);
     }
@@ -63,6 +69,17 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         if (TextUtils.isEmpty(firstName))
         {
             mFirstNameField.setError("Required.");
+            valid = false;
+        }
+        else
+        {
+            mFirstNameField.setError(null);
+        }
+
+        String lastName = mLastNameField.getText().toString();
+        if (TextUtils.isEmpty(lastName))
+        {
+            mLastNameField.setError("Required.");
             valid = false;
         }
         else
@@ -102,6 +119,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         {
             mPasswordField.setError(null);
         }
+
+        if (!mPasswordField.getText().toString().equals(mConfirmPasswordField.getText().toString()))
+        {
+            Toast.makeText(SignUp.this, "Passwords do not match",
+                    Toast.LENGTH_SHORT).show();
+            valid = false;
+        }
         return valid;
     }
 
@@ -127,7 +151,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
 
                             sendEmailVerification();
 
-                            writeNewUser(mAuth.getUid(), mUsernameField.getText().toString(), mFirstNameField.getText().toString());
+                            writeNewUser(mAuth.getUid(), mFirstNameField.getText().toString(), mLastNameField.getText().toString(), mUsernameField.getText().toString());
 
                             Intent intent = new Intent(getBaseContext(),Main.class);
                             startActivity(intent);
@@ -187,6 +211,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         if (buttonId == R.id.create_account_button)
         {
             createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
+        }
+        else if (buttonId == R.id.back_button)
+        {
+            Intent intent = new Intent(getBaseContext(), Login.class);
+            startActivity(intent);
         }
     }
 }
