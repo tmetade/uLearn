@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_friends"
+            android:title="Your Friends" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_language"
+            android:title="Your Languages" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="F.A.Q" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_live_chat"
+            android:title="Live Chat" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="Settings" />
+    </group>
+</menu>

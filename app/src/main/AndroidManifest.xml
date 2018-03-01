@@ -18,7 +18,15 @@
         <activity android:name=".Login" />
         <activity android:name=".LanguageList" />
         <activity android:name=".SignUp" />
-        <activity android:name=".Main"></activity>
+        <activity android:name=".Main" />
+        <activity android:name=".YourFriends" />
+        <activity android:name=".YourLanguages" />
+        <activity android:name=".FAQ" />
+        <activity
+            android:name=".LiveChat"
+            android:label="@string/title_activity_live_chat"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>
