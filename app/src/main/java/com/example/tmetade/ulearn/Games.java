@@ -7,12 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class YourFriends extends Fragment {
+public class Games extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_your_friends, container, false);
+        return inflater.inflate(R.layout.fragment_games, container, false);
     }
 
 
@@ -20,6 +20,6 @@ public class YourFriends extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle(getResources().getText(R.string.your_friends));
+        getActivity().setTitle(getResources().getText(R.string.games));
     }
 }
