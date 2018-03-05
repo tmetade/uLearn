@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
+        <activity android:name=".games.CardMatching" />
         <activity android:name=".LanguageList" />
         <activity android:name=".SignUp" />
         <activity android:name=".YourFriends" />
@@ -34,7 +35,8 @@
         <activity
             android:name=".Games"
             android:label="@string/title_activity_games"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".GameActivity"></activity>
     </application>
 
 </manifest>
