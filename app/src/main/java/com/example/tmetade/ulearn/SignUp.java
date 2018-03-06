@@ -8,9 +8,9 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.tmetade.ulearn.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -54,9 +54,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
-    private void writeNewUser(String userId, String firstName, String lastName, String username)
+    private void writeNewUser(String userId, String firstName, String lastName, String username, String email)
     {
-        User user = new User(firstName, lastName, username);
+        User user = new User(firstName, lastName, username, email);
 
         mDatabase.child("users").child(userId).setValue(user);
     }
@@ -151,7 +151,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
 
                             sendEmailVerification();
 
-                            writeNewUser(mAuth.getUid(), mFirstNameField.getText().toString(), mLastNameField.getText().toString(), mUsernameField.getText().toString());
+                            writeNewUser(mAuth.getUid(), mFirstNameField.getText().toString(), mLastNameField.getText().toString(), mUsernameField.getText().toString(), mEmailField.getText().toString());
 
                             Intent intent = new Intent(getBaseContext(),Main.class);
                             startActivity(intent);
