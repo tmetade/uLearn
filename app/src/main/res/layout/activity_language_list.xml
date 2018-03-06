@@ -27,7 +27,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnLang"
+            android:id="@+id/btn_french"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -39,7 +39,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/btnLang2"
+            android:id="@+id/btn_spanish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -50,7 +50,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/btnLang3"
+            android:id="@+id/btn_portuguese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -61,7 +61,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/btnLang4"
+            android:id="@+id/btn_russian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -72,7 +72,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/btnLang5"
+            android:id="@+id/btn_German"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/btnLang6"
+            android:id="@+id/btn_polish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignUp extends AppCompatActivity implements View.OnClickListener
 {
 
-    private static final String TAG = "Login";
+    private static final String TAG = "SignUp";
 
     private EditText mFirstNameField;
     private EditText mLastNameField;
@@ -153,8 +153,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
 
                             writeNewUser(mAuth.getUid(), mFirstNameField.getText().toString(), mLastNameField.getText().toString(), mUsernameField.getText().toString(), mEmailField.getText().toString());
 
-                            Intent intent = new Intent(getBaseContext(),Main.class);
-                            startActivity(intent);
+                            startActivity(new Intent(getBaseContext(),LanguageList.class));
                         }
                         else
                         {
