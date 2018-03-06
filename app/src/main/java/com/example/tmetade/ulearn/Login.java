@@ -135,8 +135,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener
         int buttonId = v.getId();
         if (buttonId == R.id.email_create_account_button)
         {
-            Intent intent = new Intent(getBaseContext(),SignUp.class);
-            startActivity(intent);
+            startActivity(new Intent(getBaseContext(),SignUp.class));
         }
         else if (buttonId == R.id.email_sign_in_button)
         {

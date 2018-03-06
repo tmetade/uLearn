@@ -11,7 +11,6 @@ public class GameView extends SurfaceView implements Runnable {
     //the game thread
     private Thread gameThread = null;
 
-
     //Class constructor
     public GameView(Context context) {
         super(context);
@@ -34,6 +33,7 @@ public class GameView extends SurfaceView implements Runnable {
 
 
     private void update() {
+
 
     }
 
