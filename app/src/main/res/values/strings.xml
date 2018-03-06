@@ -61,7 +61,7 @@
     <string name="title_activity_games">Games</string>
 
     <string name="games">Games</string>
-    <string name="your_account">Your Account</string>
+    <string name="profile">Profile</string>
     <string name="your_friends">Your Friends</string>
     <string name="your_languages">Your Languages</string>
     <string name="faq">F.A.Q</string>
@@ -70,4 +70,7 @@
 
     <string name="game_time">Time</string>
     <string name="game_score">Score</string>
+
+    <string name="achievements">Achievements</string>
+    <string name="leaderboard">Leaderboard</string>
 </resources>

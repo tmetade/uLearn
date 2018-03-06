@@ -127,8 +127,8 @@ public class Main extends AppCompatActivity
             case R.id.nav_games:
                 fragment = new Games();
                 break;
-            case R.id.nav_your_profile:
-                fragment = new YourProfile();
+            case R.id.nav_profile:
+                fragment = new Profile();
                 break;
             case R.id.nav_your_friends:
                 fragment = new YourFriends();

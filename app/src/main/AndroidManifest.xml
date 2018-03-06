@@ -31,7 +31,7 @@
             android:name=".Main"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme" />
-        <activity android:name=".YourProfile" />
+        <activity android:name=".Profile" />
         <activity
             android:name=".Games"
             android:label="@string/title_activity_games"

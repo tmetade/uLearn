@@ -9,9 +9,9 @@
             android:icon="@drawable/ic_games"
             android:title="@string/games"/>
         <item
-            android:id="@+id/nav_your_profile"
+            android:id="@+id/nav_profile"
             android:icon="@drawable/ic_account"
-            android:title="@string/your_account" />
+            android:title="@string/profile" />
         <item
             android:id="@+id/nav_your_friends"
             android:icon="@drawable/ic_menu_friends"
