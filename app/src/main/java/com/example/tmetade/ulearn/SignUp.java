@@ -213,8 +213,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener
         }
         else if (buttonId == R.id.back_button)
         {
-            Intent intent = new Intent(getBaseContext(), Login.class);
-            startActivity(intent);
+            startActivity(new Intent(getBaseContext(), Login.class));
         }
     }
 }
