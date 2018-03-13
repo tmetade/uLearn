@@ -4,12 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.tmetade.ulearn.games.CardMatching;
 
 public class Games extends Fragment implements View.OnClickListener{
 
@@ -34,9 +31,12 @@ public class Games extends Fragment implements View.OnClickListener{
     public void onClick(View v)
     {
         int buttonId = v.getId();
+        Bundle bundle = new Bundle();
         if (buttonId == R.id.game1)
         {
-            Intent intent = new Intent(getActivity().getBaseContext(),CardMatching.class);
+            bundle.putString("game","cardMatching");
+            Intent intent = new Intent(getActivity().getBaseContext(),GameActivity.class);
+            intent.putExtras(bundle);
             startActivity(intent);
         }
     }
