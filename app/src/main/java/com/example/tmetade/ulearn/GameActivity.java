@@ -12,8 +12,6 @@ public class GameActivity extends AppCompatActivity implements Runnable
 
     private static final String TAG = "GameActivity";
 
-
-    private GameView gameView;
     private Thread gameThread = null;
     volatile boolean playing;
 
@@ -37,7 +35,8 @@ public class GameActivity extends AppCompatActivity implements Runnable
             if(extrasBundle.containsKey("game"))
             {
                 String game = extrasBundle.getString("game");
-                switch (game){
+                switch (game)
+                {
                     case "cardMatching":
                         CardMatching card = new CardMatching();
                 }
@@ -65,7 +64,8 @@ public class GameActivity extends AppCompatActivity implements Runnable
     @Override
     public void run()
     {
-        while (playing) {
+        while (playing)
+        {
             //to update the frame
             update();
 
@@ -81,9 +81,11 @@ public class GameActivity extends AppCompatActivity implements Runnable
     {
         iTimeElapsed ++;
         final int iTimeRemaining = iTimer - iTimeElapsed;
-        runOnUiThread(new Runnable() {
+        runOnUiThread(new Runnable()
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 mTextTimer.setText(" " + iTimeRemaining / 100);
             }
         });
@@ -107,20 +109,21 @@ public class GameActivity extends AppCompatActivity implements Runnable
         }
     }
 
-    public void pause() {
-        //when the game is paused
-        //setting the variable to false
+    public void pause()
+    {
+
         playing = false;
         try {
             //stopping the thread
             gameThread.join();
-        } catch (InterruptedException e) {
+        } catch (InterruptedException e)
+        {
         }
     }
 
-    public void resume() {
-        //when the game is resumed
-        //starting the thread again
+    public void resume()
+    {
+
         playing = true;
         gameThread = new Thread(this);
         gameThread.start();
