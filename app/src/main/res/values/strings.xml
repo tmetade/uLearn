@@ -80,4 +80,8 @@
 
     <string name="retry">Retry</string>
     <string name="return_to_games">Return To Games</string>
+
+    <string name="card_back_title">Card back</string>
+    <string name="card_back_description">Card back description</string>
+    <string name="description_image_1">image 1 description</string>
 </resources>
