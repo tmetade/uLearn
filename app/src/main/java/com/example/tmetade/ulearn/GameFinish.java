@@ -10,8 +10,6 @@ public class GameFinish extends AppCompatActivity implements View.OnClickListene
 
     private static final String TAG = "GameFinish";
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

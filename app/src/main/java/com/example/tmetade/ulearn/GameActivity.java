@@ -24,7 +24,6 @@ public class GameActivity extends AppCompatActivity implements Runnable
 
     private ImageView mBackButton;
     private TextView mTextTimer;
-    private ImageView mImageView;
 
     Intent intentExtras;
 
@@ -67,25 +66,6 @@ public class GameActivity extends AppCompatActivity implements Runnable
             }
         });
         mTextTimer = (TextView) findViewById(R.id.text_time_left);
-//        mImageView = (ImageView) findViewById(R.id.imageView2);
-//        mImageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                final ObjectAnimator oa1 = ObjectAnimator.ofFloat(mImageView, "scaleX", 1f, 0f);
-//                final ObjectAnimator oa2 = ObjectAnimator.ofFloat(mImageView, "scaleX", 0f, 1f);
-//                oa1.setInterpolator(new DecelerateInterpolator());
-//                oa2.setInterpolator(new AccelerateDecelerateInterpolator());
-//                oa1.addListener(new AnimatorListenerAdapter() {
-//                    @Override
-//                    public void onAnimationEnd(Animator animation) {
-//                        super.onAnimationEnd(animation);
-//                        mImageView.setImageResource(R.drawable.card_front);
-//                        oa2.start();
-//                    }
-//                });
-//                oa1.start();
-//            }
-//        });
     }
 
     //pausing the game when activity is paused
