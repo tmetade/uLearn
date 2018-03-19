@@ -1,14 +1,11 @@
 package com.example.tmetade.ulearn;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +34,8 @@ public class GameActivity extends AppCompatActivity implements Runnable
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        Fragment fragment = null;
+
         intentExtras = getIntent();
         Bundle extrasBundle = intentExtras.getExtras();
 
@@ -49,34 +48,44 @@ public class GameActivity extends AppCompatActivity implements Runnable
                 {
                     case "cardMatching":
                         CardMatching card = new CardMatching();
+                        fragment = new CardMatching();
+                        break;
                 }
             }
         }
+
+        if (fragment != null)
+        {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.game_view, fragment);
+            ft.commit();
+        }
+
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
             }
         });
         mTextTimer = (TextView) findViewById(R.id.text_time_left);
-        mImageView = (ImageView) findViewById(R.id.imageView2);
-        mImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final ObjectAnimator oa1 = ObjectAnimator.ofFloat(mImageView, "scaleX", 1f, 0f);
-                final ObjectAnimator oa2 = ObjectAnimator.ofFloat(mImageView, "scaleX", 0f, 1f);
-                oa1.setInterpolator(new DecelerateInterpolator());
-                oa2.setInterpolator(new AccelerateDecelerateInterpolator());
-                oa1.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        mImageView.setImageResource(R.drawable.card_front);
-                        oa2.start();
-                    }
-                });
-                oa1.start();
-            }
-        });
+//        mImageView = (ImageView) findViewById(R.id.imageView2);
+//        mImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                final ObjectAnimator oa1 = ObjectAnimator.ofFloat(mImageView, "scaleX", 1f, 0f);
+//                final ObjectAnimator oa2 = ObjectAnimator.ofFloat(mImageView, "scaleX", 0f, 1f);
+//                oa1.setInterpolator(new DecelerateInterpolator());
+//                oa2.setInterpolator(new AccelerateDecelerateInterpolator());
+//                oa1.addListener(new AnimatorListenerAdapter() {
+//                    @Override
+//                    public void onAnimationEnd(Animator animation) {
+//                        super.onAnimationEnd(animation);
+//                        mImageView.setImageResource(R.drawable.card_front);
+//                        oa2.start();
+//                    }
+//                });
+//                oa1.start();
+//            }
+//        });
     }
 
     //pausing the game when activity is paused

@@ -92,12 +92,10 @@
 
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/card_back_blue" />
+        <FrameLayout
+            android:id="@+id/game_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
 
     </LinearLayout>
 
