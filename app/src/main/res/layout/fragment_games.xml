@@ -1,42 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar_games"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:progress="25" />
+
+        <TextView
+            android:id="@+id/text_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="20% complete" />
+    </TableRow>
+
+    <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:paddingTop="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <ProgressBar
-                android:id="@+id/progress_bar_games"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:progress="25" />
+            <ImageView
+                android:id="@+id/img_verbs"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/card_back_description"
+                app:srcCompat="@drawable/card_back_blue" />
 
             <TextView
-                android:id="@+id/text_progress"
-                android:layout_width="wrap_content"
+                android:id="@+id/txt_verbs"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="20% complete" />
+                android:text="@string/card_matching_game"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:text="@string/card_matching_game" />
+
+            <TextView
+                android:id="@+id/txt_verb_pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20 pts"
+                android:textAlignment="center" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/game1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_directions"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/game_directions" />
+
+            <TextView
+                android:id="@+id/txt_directions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/direction_game"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:text="@string/direction_game" />
+
+            <TextView
+                android:id="@+id/txt_directions_pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="140 pts"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Game 1" />
-    </LinearLayout>
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-</RelativeLayout>
+            <ImageView
+                android:id="@+id/img_sports"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/card_back_description"
+                app:srcCompat="@drawable/game_sports" />
 
+            <TextView
+                android:id="@+id/txt_sports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sports_game"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:text="@string/sports_game" />
+
+            <TextView
+                android:id="@+id/txt_sports_pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="210 pts"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_order_up"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/card_back_description"
+                app:srcCompat="@drawable/game_orderup"/>
+
+
+            <TextView
+                android:id="@+id/txt_order_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_up_game"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:text="@string/order_up_game" />
+
+            <TextView
+                android:id="@+id/txt_order_up_pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="700 pts"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </TableRow>
+</TableLayout>

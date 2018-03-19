@@ -24,18 +24,40 @@ public class Games extends Fragment implements View.OnClickListener{
         getActivity().setTitle(getResources().getText(R.string.games));
 
         // Buttons
-        view.findViewById(R.id.game1).setOnClickListener(this);
+        view.findViewById(R.id.img_verbs).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v)
     {
         int buttonId = v.getId();
+        Intent intent;
         Bundle bundle = new Bundle();
-        if (buttonId == R.id.game1)
+        if (buttonId == R.id.img_verbs)
         {
             bundle.putString("game","cardMatching");
-            Intent intent = new Intent(getActivity().getBaseContext(),GameActivity.class);
+            intent = new Intent(getActivity().getBaseContext(),GameActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if (buttonId == R.id.img_directions)
+        {
+            bundle.putString("game","cardMatching");
+            intent = new Intent(getActivity().getBaseContext(),GameActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if (buttonId == R.id.img_sports)
+        {
+            bundle.putString("game","cardMatching");
+            intent = new Intent(getActivity().getBaseContext(),GameActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if (buttonId == R.id.img_order_up)
+        {
+            bundle.putString("game","cardMatching");
+            intent = new Intent(getActivity().getBaseContext(),GameActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
         }
