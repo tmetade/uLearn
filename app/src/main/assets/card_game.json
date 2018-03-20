@@ -1,0 +1,61 @@
+{
+   "avoir":
+   [
+     {
+       "je":
+       {
+         "img": "@drawable/card_front",
+         "pair": "as"
+       }
+     },
+     {
+       "tu":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "as"
+       }
+     },
+     {
+       "il":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "as"
+       }
+     },
+     {
+       "elle":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "as"
+       }
+     },
+     {
+       "nous":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "avez"
+       }
+     },
+     {
+       "vous":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "avons"
+       }
+     },
+     {
+       "ils":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "avons"
+       }
+     },
+     {
+       "elles":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "avons"
+       }
+     }
+   ]
+}
