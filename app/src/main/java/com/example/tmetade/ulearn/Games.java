@@ -25,6 +25,9 @@ public class Games extends Fragment implements View.OnClickListener{
 
         // Buttons
         view.findViewById(R.id.img_verbs).setOnClickListener(this);
+        view.findViewById(R.id.img_directions).setOnClickListener(this);
+        view.findViewById(R.id.img_sports).setOnClickListener(this);
+        view.findViewById(R.id.img_order_up).setOnClickListener(this);
     }
 
     @Override

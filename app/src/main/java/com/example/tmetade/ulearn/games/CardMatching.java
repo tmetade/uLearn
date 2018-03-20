@@ -15,10 +15,10 @@ import android.widget.ImageView;
 
 import com.example.tmetade.ulearn.R;
 
-public class CardMatching extends Fragment
+public class CardMatching extends Fragment implements View.OnClickListener
 {
 
-    private ImageView mImageView;
+    private ImageView mCardView;
 
     @Nullable
     @Override
@@ -33,24 +33,39 @@ public class CardMatching extends Fragment
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mImageView = (ImageView) view.findViewById(R.id.imageView2);
-        mImageView.setOnClickListener(new View.OnClickListener() {
+        // buttons
+        view.findViewById(R.id.img_card1).setOnClickListener(this);
+        view.findViewById(R.id.img_card2).setOnClickListener(this);
+        view.findViewById(R.id.img_card3).setOnClickListener(this);
+        view.findViewById(R.id.img_card4).setOnClickListener(this);
+        view.findViewById(R.id.img_card5).setOnClickListener(this);
+        view.findViewById(R.id.img_card6).setOnClickListener(this);
+        view.findViewById(R.id.img_card7).setOnClickListener(this);
+        view.findViewById(R.id.img_card8).setOnClickListener(this);
+        view.findViewById(R.id.img_card9).setOnClickListener(this);
+    }
+
+    public void flip(int id)
+    {
+        mCardView = (ImageView) getView().findViewById(id);
+        final ObjectAnimator oa1 = ObjectAnimator.ofFloat(mCardView, "scaleX", 1f, 0f);
+        final ObjectAnimator oa2 = ObjectAnimator.ofFloat(mCardView, "scaleX", 0f, 1f);
+        oa1.setInterpolator(new DecelerateInterpolator());
+        oa2.setInterpolator(new AccelerateDecelerateInterpolator());
+        oa1.addListener(new AnimatorListenerAdapter() {
             @Override
-            public void onClick(View view) {
-                final ObjectAnimator oa1 = ObjectAnimator.ofFloat(mImageView, "scaleX", 1f, 0f);
-                final ObjectAnimator oa2 = ObjectAnimator.ofFloat(mImageView, "scaleX", 0f, 1f);
-                oa1.setInterpolator(new DecelerateInterpolator());
-                oa2.setInterpolator(new AccelerateDecelerateInterpolator());
-                oa1.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        mImageView.setImageResource(R.drawable.card_front);
-                        oa2.start();
-                    }
-                });
-                oa1.start();
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                mCardView.setImageResource(R.drawable.card_front);
+                oa2.start();
             }
         });
+        oa1.start();
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        flip(v.getId());
     }
 }

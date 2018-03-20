@@ -12,7 +12,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/img_card1"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -20,7 +20,7 @@
             android:src="@drawable/card_back_blue" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/img_card2"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -28,7 +28,7 @@
             android:src="@drawable/card_back_blue" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/img_card3"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/img_card4"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -51,7 +51,7 @@
             android:src="@drawable/card_back_blue" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/img_card5"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -59,7 +59,7 @@
             android:src="@drawable/card_back_blue" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/img_card6"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -74,7 +74,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/img_card7"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -82,7 +82,7 @@
             android:src="@drawable/card_back_blue" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/img_card8"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
@@ -90,7 +90,7 @@
             android:src="@drawable/card_back_blue" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/img_card9"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
