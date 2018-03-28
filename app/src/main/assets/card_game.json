@@ -2,10 +2,10 @@
    "avoir":
    [
      {
-       "je":
+       "j'":
        {
          "img": "@drawable/card_front",
-         "pair": "as"
+         "pair": "ai"
        }
      },
      {
@@ -19,42 +19,84 @@
        "il":
        {
          "img": "@drawable/card_back_blue",
-         "pair": "as"
+         "pair": "a"
        }
      },
      {
        "elle":
        {
          "img": "@drawable/card_back_blue",
-         "pair": "as"
+         "pair": "a"
        }
      },
      {
        "nous":
        {
          "img": "@drawable/card_back_blue",
-         "pair": "avez"
+         "pair": "avons"
        }
      },
      {
        "vous":
        {
          "img": "@drawable/card_back_blue",
-         "pair": "avons"
+         "pair": "avez"
        }
      },
      {
        "ils":
        {
          "img": "@drawable/card_back_blue",
-         "pair": "avons"
+         "pair": "ont"
        }
      },
      {
        "elles":
        {
          "img": "@drawable/card_back_blue",
-         "pair": "avons"
+         "pair": "ont"
+       }
+     },
+     {
+       "ai":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "j'"
+       }
+     },
+     {
+       "as":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "tu"
+       }
+     },
+     {
+       "a":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": [ "il", "elle" ]
+       }
+     },
+     {
+       "avons":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "nous"
+       }
+     },
+     {
+       "avez":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": "vous"
+       }
+     },
+     {
+       "ont":
+       {
+         "img": "@drawable/card_back_blue",
+         "pair": [ "ils", "elles" ]
        }
      }
    ]
