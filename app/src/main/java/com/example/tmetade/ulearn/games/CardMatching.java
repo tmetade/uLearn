@@ -16,6 +16,7 @@ import android.widget.ImageView;
 
 import com.example.tmetade.ulearn.R;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -28,6 +29,10 @@ public class CardMatching extends Fragment implements View.OnClickListener
     private ImageView mCardView;
     JSONObject mJson;
 
+    private Card[] pronouns = new Card[8];
+    private Card[] verbs = new Card[8];
+    private Card[] game = new Card[8];
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -38,6 +43,11 @@ public class CardMatching extends Fragment implements View.OnClickListener
         } catch (Exception e)
         {
             e.printStackTrace();
+        }
+
+        if(mJson != null)
+        {
+            buildGame();
         }
 
         return inflater.inflate(R.layout.fragment_card_matching, container, false);
@@ -58,6 +68,34 @@ public class CardMatching extends Fragment implements View.OnClickListener
         view.findViewById(R.id.img_card7).setOnClickListener(this);
         view.findViewById(R.id.img_card8).setOnClickListener(this);
         view.findViewById(R.id.img_card9).setOnClickListener(this);
+    }
+
+    private void buildGame()
+    {
+        try
+        {
+            JSONArray game = mJson.getJSONArray("avoir");
+            JSONArray pronounsArray = game.getJSONObject(0).getJSONArray("pronouns");
+           for (int i = 0; i<pronounsArray.length(); i++)
+            {
+                JSONObject pronoun = pronounsArray.getJSONObject(i);
+                Card pronounCard = new Card(pronoun.getString("pronoun"), pronoun.getString("img"), null);
+                pronouns[i] = pronounCard;
+                System.out.println(pronoun);
+            }
+            JSONArray verbsArray = game.getJSONObject(1).getJSONArray("verbs");
+            for (int i = 0; i<pronounsArray.length(); i++)
+            {
+                JSONObject verb = verbsArray.getJSONObject(i);
+                Card verbCard = new Card(verb.getString("verb"), verb.getString("img"), null);
+                verbs[i] = verbCard;
+                System.out.println(verb);
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public void flip(int id)

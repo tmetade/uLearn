@@ -36,16 +36,16 @@ public class Profile extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        super.onViewCreated(view, savedInstanceState);
-        //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle(getResources().getText(R.string.profile));
-
         mDatabase = FirebaseDatabase.getInstance().getReference();
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         mTextUsername = (TextView) view.findViewById(R.id.text_username);
 
         populateMenu();
+
+        super.onViewCreated(view, savedInstanceState);
+        //you can set the title for your toolbar here for different fragments different titles
+        getActivity().setTitle(getResources().getText(R.string.profile));
     }
 
     private void populateMenu()

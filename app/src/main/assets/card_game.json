@@ -2,102 +2,153 @@
    "avoir":
    [
      {
-       "j'":
-       {
-         "img": "@drawable/card_front",
-         "pair": "ai"
-       }
+       "pronouns":
+       [
+         {
+           "pronoun": "j'",
+           "img": "@drawable/card_front",
+           "pair": "ai"
+         },
+         {
+           "pronoun": "tu",
+           "img": "@drawable/card_back_blue",
+           "pair": "as"
+         },
+         {
+           "pronoun": "il",
+           "img": "@drawable/card_back_blue",
+           "pair": "a"
+         },
+         {
+           "pronoun": "elle",
+           "img": "@drawable/card_back_blue",
+           "pair": "a"
+         },
+         {
+           "pronoun": "nous",
+           "img": "@drawable/card_back_blue",
+           "pair": "avons"
+         },
+         {
+           "pronoun": "vous",
+           "img": "@drawable/card_back_blue",
+           "pair": "avez"
+         },
+         {
+           "pronoun": "ils",
+           "img": "@drawable/card_back_blue",
+           "pair": "ont"
+         },
+         {
+           "pronoun": "elles",
+           "img": "@drawable/card_back_blue",
+           "pair": "ont"
+         }
+       ]
      },
      {
-       "tu":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "as"
-       }
-     },
-     {
-       "il":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "a"
-       }
-     },
-     {
-       "elle":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "a"
-       }
-     },
-     {
-       "nous":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "avons"
-       }
-     },
-     {
-       "vous":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "avez"
-       }
-     },
-     {
-       "ils":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "ont"
-       }
-     },
-     {
-       "elles":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "ont"
-       }
-     },
-     {
-       "ai":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "j'"
-       }
-     },
-     {
-       "as":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "tu"
-       }
-     },
-     {
-       "a":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": [ "il", "elle" ]
-       }
-     },
-     {
-       "avons":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "nous"
-       }
-     },
-     {
-       "avez":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": "vous"
-       }
-     },
-     {
-       "ont":
-       {
-         "img": "@drawable/card_back_blue",
-         "pair": [ "ils", "elles" ]
-       }
+       "verbs":
+       [
+         {
+           "verb": "ai",
+           "img": "@drawable/card_back_blue",
+           "pair": "j'"
+         },
+         {
+           "verb": "as",
+           "img": "@drawable/card_back_blue",
+           "pair": "tu"
+         },
+         {
+           "verb": "a",
+           "img": "@drawable/card_back_blue",
+           "pair": "il"
+         },
+         {
+           "verb": "a",
+           "img": "@drawable/card_back_blue",
+           "pair": "elle"
+         },
+         {
+           "verb": "avons",
+           "img": "@drawable/card_back_blue",
+           "pair": "nous"
+         },
+         {
+           "verb": "avez",
+           "img": "@drawable/card_back_blue",
+           "pair": "vous"
+         },
+         {
+           "verb": "ont",
+           "img": "@drawable/card_back_blue",
+           "pair": "ils"
+         },
+         {
+           "verb": "ont",
+           "img": "@drawable/card_back_blue",
+           "pair": "elles"
+         }
+       ]
      }
    ]
+}
+
+       //     {
+       //       "ai":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "j'"
+       //       }
+       //     },
+       //     {
+       //       "as":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "tu"
+       //       }
+       //     },
+       //     {
+       //       "a":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "elle"
+       //       }
+       //     },
+       //     {
+       //       "a":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair":  "il"
+       //       }
+       //     },
+       //     {
+       //       "avons":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "nous"
+       //       }
+       //     },
+       //     {
+       //       "avez":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "vous"
+       //       }
+       //     },
+       //     {
+       //       "ont":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "elles"
+       //       }
+       //     },
+       //     {
+       //       "ont":
+       //       {
+       //         "img": "@drawable/card_back_blue",
+       //         "pair": "ils"
+       //       }
+       //     }
+     }
 }
