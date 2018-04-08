@@ -1,5 +1,6 @@
 package com.example.tmetade.ulearn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -139,11 +140,9 @@ public class Main extends AppCompatActivity
             case R.id.nav_faq:
                 fragment = new FAQ();
                 break;
-            case R.id.nav_live_chat:
-                fragment = new LiveChat();
-                break;
-            case R.id.nav_settings:
-                fragment = new Settings();
+            case R.id.nav_sign_out:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getBaseContext(), Login.class));
                 break;
         }
 

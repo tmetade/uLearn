@@ -39,17 +39,19 @@ public class Profile extends Fragment
         mDatabase = FirebaseDatabase.getInstance().getReference();
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        mTextUsername = (TextView) view.findViewById(R.id.text_username);
+        mTextUsername = view.findViewById(R.id.text_username);
 
-        populateMenu();
+
 
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle(getResources().getText(R.string.profile));
+        populateMenu();
     }
 
     private void populateMenu()
     {
+
         mDatabase.child("users").child(uid).addListenerForSingleValueEvent(
                 new ValueEventListener()
                 {
@@ -58,7 +60,7 @@ public class Profile extends Fragment
                     {
                         // Get user value
                         User user = dataSnapshot.getValue(User.class);
-
+                        Log.e(TAG, "WTF2");
                         // [START_EXCLUDE]
                         if (user == null)
                         {
@@ -67,6 +69,7 @@ public class Profile extends Fragment
                         } else
                         {
                             mTextUsername.setText(user.username);
+
                         }
                     }
 
