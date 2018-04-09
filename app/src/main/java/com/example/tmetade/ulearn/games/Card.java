@@ -4,9 +4,9 @@ public class Card
 {
     private String name;
     private String imgCard;
-    private Card pair;
+    private String pair;
 
-    public Card (String name, String imgCard, Card pair)
+    public Card (String name, String imgCard, String pair)
     {
         this.name = name;
         this.imgCard = imgCard;
@@ -23,7 +23,7 @@ public class Card
         return imgCard;
     }
 
-    public Card getPair()
+    public String getPair()
     {
         return pair;
     }
@@ -33,7 +33,7 @@ public class Card
         this.imgCard = imgCard;
     }
 
-    public void setPair(Card pair)
+    public void setPair(String pair)
     {
         this.pair = pair;
     }

@@ -24,6 +24,7 @@ public class GameActivity extends AppCompatActivity implements Runnable
 
     private ImageView mBackButton;
     private TextView mTextTimer;
+    private TextView mUserScore;
 
     Intent intentExtras;
 
@@ -65,7 +66,8 @@ public class GameActivity extends AppCompatActivity implements Runnable
                 finish();
             }
         });
-        mTextTimer = (TextView) findViewById(R.id.text_time_left);
+        mTextTimer = findViewById(R.id.text_time_left);
+        mUserScore = findViewById(R.id.text_user_score);
     }
 
     //pausing the game when activity is paused
@@ -114,7 +116,11 @@ public class GameActivity extends AppCompatActivity implements Runnable
         });
         if (iTimeRemaining < 0)
         {
-            startActivity(new Intent(getBaseContext(), GameFinish.class));
+            Bundle bundle = new Bundle();
+            bundle.putString("score",String.valueOf(mUserScore.getText()));
+            Intent intent = new Intent(getBaseContext(), GameFinish.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 

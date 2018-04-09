@@ -6,42 +6,42 @@
        [
          {
            "pronoun": "j'",
-           "img": "@drawable/card_front",
+           "img": "@drawable/card_j",
            "pair": "ai"
          },
          {
            "pronoun": "tu",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_tu",
            "pair": "as"
          },
          {
            "pronoun": "il",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_il",
            "pair": "a"
          },
          {
            "pronoun": "elle",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_elle",
            "pair": "a"
          },
          {
            "pronoun": "nous",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_nous",
            "pair": "avons"
          },
          {
            "pronoun": "vous",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_vous",
            "pair": "avez"
          },
          {
            "pronoun": "ils",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_ils",
            "pair": "ont"
          },
          {
            "pronoun": "elles",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_elles",
            "pair": "ont"
          }
        ]
@@ -51,104 +51,45 @@
        [
          {
            "verb": "ai",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_ai",
            "pair": "j'"
          },
          {
            "verb": "as",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_as",
            "pair": "tu"
          },
          {
            "verb": "a",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_a",
            "pair": "il"
          },
          {
            "verb": "a",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_a",
            "pair": "elle"
          },
          {
            "verb": "avons",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_avons",
            "pair": "nous"
          },
          {
            "verb": "avez",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_avez",
            "pair": "vous"
          },
          {
            "verb": "ont",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_ont",
            "pair": "ils"
          },
          {
            "verb": "ont",
-           "img": "@drawable/card_back_blue",
+           "img": "@drawable/card_ont",
            "pair": "elles"
          }
        ]
      }
    ]
-}
-
-       //     {
-       //       "ai":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "j'"
-       //       }
-       //     },
-       //     {
-       //       "as":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "tu"
-       //       }
-       //     },
-       //     {
-       //       "a":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "elle"
-       //       }
-       //     },
-       //     {
-       //       "a":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair":  "il"
-       //       }
-       //     },
-       //     {
-       //       "avons":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "nous"
-       //       }
-       //     },
-       //     {
-       //       "avez":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "vous"
-       //       }
-       //     },
-       //     {
-       //       "ont":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "elles"
-       //       }
-       //     },
-       //     {
-       //       "ont":
-       //       {
-       //         "img": "@drawable/card_back_blue",
-       //         "pair": "ils"
-       //       }
-       //     }
-     }
 }
