@@ -17,10 +17,6 @@
             android:icon="@drawable/ic_menu_friends"
             android:title="@string/your_friends" />
         <item
-            android:id="@+id/nav_your_languages"
-            android:icon="@drawable/ic_menu_language"
-            android:title="@string/your_languages" />
-        <item
             android:id="@+id/nav_faq"
             android:icon="@android:drawable/ic_menu_help"
             android:title="@string/faq" />

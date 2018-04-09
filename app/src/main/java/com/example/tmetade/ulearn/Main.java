@@ -134,9 +134,6 @@ public class Main extends AppCompatActivity
             case R.id.nav_your_friends:
                 fragment = new YourFriends();
                 break;
-            case R.id.nav_your_languages:
-                fragment = new YourLanguages();
-                break;
             case R.id.nav_faq:
                 fragment = new FAQ();
                 break;
